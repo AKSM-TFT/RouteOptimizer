@@ -1,2 +1,19 @@
-.venv
+# Environment
 .env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# Alembic (keep versions, ignore cache)
+migrations/__pycache__/
+
+# Docker
+*.log
+
+# IDE
+.vscode/
+.idea/
