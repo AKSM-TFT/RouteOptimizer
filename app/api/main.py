@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from app.core import settings
-from app.api.routes import orders
+from app.api.routes import orders, drivers
 
 app = FastAPI(
     title="Delivery Route Optimizer",
@@ -9,6 +9,7 @@ app = FastAPI(
 )
 
 app.include_router(orders.router)
+app.include_router(drivers.router)
 
 @app.get("/health") 
 async def health_check():
